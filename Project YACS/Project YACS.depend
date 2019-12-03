@@ -1,0 +1,47 @@
+# depslib dependency file v1.0
+1506347856 source:c:\users\stout\desktop\google drive\__projetos\disciplinas\d-algoritmos e programação aplicada - licenciatura\exercicios de repeticao\project yacs\main.c
+	"defs.h"
+
+1506347856 c:\users\stout\desktop\google drive\__projetos\disciplinas\d-algoritmos e programação aplicada - licenciatura\exercicios de repeticao\project yacs\defs.h
+	<stdio.h>
+	<stdlib.h>
+
+1506347856 source:c:\users\stout\desktop\google drive\__projetos\disciplinas\d-algoritmos e programação aplicada - licenciatura\exercicios de repeticao\project yacs\yacs.c
+	"defs.h"
+
+1506688729 source:c:\users\stout\desktop\google drive\__projetos\______________\__yacs\project yacs\main.c
+	"defs.h"
+
+1506688729 c:\users\stout\desktop\google drive\__projetos\______________\__yacs\project yacs\defs.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+
+1506942907 source:c:\users\stout\desktop\google drive\__projetos\______________\__yacs\project yacs\yacs.c
+	"defs.h"
+
+1506622720 source:c:\users\stout\desktop\google drive\__projetos\______________\__yacs\project yacs\randomgenerators.c
+	"defs.h"
+
+1506939916 source:c:\users\stout\desktop\google drive\__projetos\______________\__yacs\project yacs\linkedlist.c
+	"defs.h"
+
+1574690070 source:c:\users\stout\google drive\__projetos\__todo\__intro to pe\tools\project yacs\linkedlist.c
+	"defs.h"
+
+1574699826 c:\users\stout\google drive\__projetos\__todo\__intro to pe\tools\project yacs\defs.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+
+1506688729 source:c:\users\stout\google drive\__projetos\__todo\__intro to pe\tools\project yacs\main.c
+	"defs.h"
+
+1506622720 source:c:\users\stout\google drive\__projetos\__todo\__intro to pe\tools\project yacs\randomgenerators.c
+	"defs.h"
+
+1506968228 source:c:\users\stout\google drive\__projetos\__todo\__intro to pe\tools\project yacs\yacs.c
+	"defs.h"
+
