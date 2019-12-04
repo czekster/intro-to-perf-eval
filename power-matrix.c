@@ -26,7 +26,7 @@
 #include <math.h>       // pow, sqrt
 
 #define ORDER 3         // model size
-#define MAXRUNS 1000000 // number of runs
+#define MAXRUNS 10000   // number of runs
 #define RESIDUE 1e-10   // residual difference between two iterations
 
 /** Checks for convergence, i.e., all positions from two vectors must be greater than the RESIDUE constant. */
@@ -47,18 +47,13 @@ void multiply(float m[ORDER][ORDER]) {
    float tot = 0.0;
    for (c = 0; c < ORDER; c++) {
       for (d = 0; d < ORDER; d++) {
-        for (k = 0; k < ORDER; k++) {
-          tot = tot + m[c][k] * m[k][d];
-        }
+        for (k = 0; k < ORDER; k++)
+          tot += m[c][k] * m[k][d];
         aux[c][d] = tot;
         tot = 0;
       }
    }
-   for (c = 0; c < ORDER; c++) {
-      for (d = 0; d < ORDER; d++) {
-         m[c][d] = aux[c][d];
-      }
-   }
+   memcpy(m, aux, sizeof(float)*ORDER*ORDER);
 }
 
 int main(int argc, char *argv[]) {
