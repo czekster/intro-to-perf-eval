@@ -55,14 +55,14 @@ int find_order(char* file) {
    int i=0, j=0;
    int orderj=0;
    FILE *fp;
-   char line[255];
+   char line[LIMIT];
    char *pch;
    fp = fopen(file, "r");
    if (fp == NULL) {
       printf("Error while opening file.\n");
       exit(1);
    }
-   while (fgets( line, 255, fp) != NULL ) {
+   while (fgets( line, LIMIT, fp) != NULL ) {
       line[strcspn(line, "\n")] = 0;  // remove \n from line
       if (line[0] == '#')             // bypass comments
           continue;
