@@ -25,6 +25,7 @@
 #include <string.h>     // memcpy
 #include <math.h>       // pow, sqrt
 
+#define LIMIT   1024    // line size limit
 #define MAXRUNS 1000000 // number of runs
 #define RESIDUE 1e-10   // residual difference between two iterations
 
@@ -82,14 +83,14 @@ void openDTMC(char* file, float **m) {
    int orderj=0;
    FILE *fp;
    float rowsum;
-   char line[255];
+   char line[LIMIT];
    char *pch;
    fp = fopen(file, "r");
    if (fp == NULL) {
       printf("Error while opening file.\n");
       exit(1);
    }
-   while (fgets( line, 255, fp) != NULL ) {
+   while (fgets( line, LIMIT, fp) != NULL ) {
       line[strcspn(line, "\n")] = 0;  // remove \n from line
       if (line[0] == '#')             // bypass comments
           continue;
@@ -104,8 +105,8 @@ void openDTMC(char* file, float **m) {
       i++;
       orderj = j;
       j = 0;
-      if (rowsum != 1.0) {
-          printf("error in line: not summing to one (sum=%f).\n", rowsum);
+      if (rowsum > 1.0 && rowsum < 0.9999) {
+          printf("error in line: not summing to one (sum=%4.8f).\n", rowsum);
           exit(1);
        }
    }
